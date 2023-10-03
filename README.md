@@ -1,1 +1,1 @@
-# fullstackdan.dev.v2
+# fullstackdan.dev v2
