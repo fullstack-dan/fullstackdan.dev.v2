@@ -1,51 +1,51 @@
 @font-face {
-  font-family: "Space Mono";
-  src: url("./assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+    font-family: "Space Mono";
+    src: url("./assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Space Mono Bold";
-  src: url("./assets/fonts/Space_Mono/SpaceMono-Bold.ttf");
+    font-family: "Space Mono Bold";
+    src: url("./assets/fonts/Space_Mono/SpaceMono-Bold.ttf");
 }
 
 :root {
-  --background-color: #09203f;
-  --color: #ff7746;
+    --background-color: #09203f;
+    --color: #ff7746;
 }
 
 html {
-  font-family: "Space Mono", Arial, sans-serif;
-  font-size: 24px;
-  background-color: var(--background-color);
-  color: var(--color);
+    font-family: "Space Mono", Arial, sans-serif;
+    font-size: 24px;
+    background-color: var(--background-color);
+    color: var(--color);
 }
 
 .link {
-  text-decoration: underline;
-  position: relative;
-  bottom: 0;
-  right: 0;
-  cursor: pointer;
+    text-decoration: underline;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
 }
 
 .link:hover {
-  bottom: -0.125rem;
-  right: -0.125rem;
+    bottom: -0.125rem;
+    right: -0.125rem;
 }
 
 .text-logo {
-  font-family: "Space Mono Bold", Arial, sans-serif;
-  font-style: italic;
-  font-size: 1.5rem;
-  letter-spacing: -0.156rem;
-  cursor: pointer;
+    font-family: "Space Mono Bold", Arial, sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    letter-spacing: -0.156rem;
+    cursor: pointer;
 
-  position: relative;
-  bottom: 0;
-  left: 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
 
 .text-logo:hover {
-  bottom: 0.125rem;
-  left: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
 }
