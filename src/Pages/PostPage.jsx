@@ -36,9 +36,17 @@ const PostPage = () => {
                     <ReactMarkdown>{post.content}</ReactMarkdown>
                 </div>
             ) : (
-                <div>Nothing to see here...</div>
+                loadingPosts()
             )}
         </div>
+    );
+};
+
+const loadingPosts = () => {
+    return (
+        <h1 className="loading-posts">
+            Loading<span className="dots"></span>
+        </h1>
     );
 };
 
