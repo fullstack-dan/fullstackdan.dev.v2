@@ -3,56 +3,33 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './PostList.css';
 
-const examplePosts = [
-    {
-        id: 1,
-        title: 'Post 1',
-        description: 'Subtitle 1',
-        author: 'daniel a.',
-        date: '2021-01-01',
-        tags: ['tag1', 'tag2'],
-        content: 'This is the content of post 1'
-    },
-    {
-        id: 2,
-        title: 'Post 2',
-        description: 'Subtitle 2',
-        author: 'daniel a.',
-        date: '2021-01-02',
-        tags: ['tag1', 'tag2'],
-        content: 'This is the content of post 2'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        description: 'Subtitle 3',
-        author: 'daniel a.',
-        date: '2021-01-03',
-        tags: ['tag1', 'tag2'],
-        content: 'This is the content of post 3'
-    }
-];
+import { APIContext } from '../App.jsx';
 
-const PostList = () => {
+// eslint-disable-next-line react/prop-types
+const PostList = ({ count }) => {
     const [posts, setPosts] = useState(null);
+    const [postCount, setPostCount] = useState(count);
+    const APIURL = React.useContext(APIContext);
 
     useEffect(() => {
-        const getPosts = async () => {
-            // const response = await fetch("https://blog.fullstackdan.dev/posts");
-            // const data = await response.json();
-            // setPosts(data);
-            setPosts(examplePosts);
-        };
-        getPosts();
-    });
+        setPostCount(count);
+        fetch(`${APIURL}/blogs`)
+            .then((response) => response.json())
+            .then((data) => {
+                setPosts(data.blogs);
+            })
+            .catch((error) => {
+                console.error('Error fetching posts', error);
+            });
+    }, [APIURL, count]);
 
     return (
         <>
             {posts ? (
-                <div className="post-list">
-                    {posts.map((post) => {
-                        return <PostPreview key={post.id} post={post} />;
-                    })}
+                <div className="blog-posts">
+                    {posts.slice(0, postCount).map((post) => (
+                        <PostPreview key={post._id} post={post} />
+                    ))}
                 </div>
             ) : (
                 loadingPosts()
@@ -73,7 +50,8 @@ const loadingPosts = () => {
 };
 
 const PostPreview = ({ post }) => {
-    const { title, author, description, id, date } = post;
+    const { title, author, description, _id, createdAt } = post;
+    const date = createdAt.split('T')[0];
     return (
         <div className="blog-post">
             <div className="blog-info">
@@ -90,7 +68,7 @@ const PostPreview = ({ post }) => {
                 </div>
             </div>
             <div className="blog-number">
-                [{id.toString().padStart(2, '0')}]
+                [{_id.toString().padStart(2, '0')}]
             </div>
         </div>
     );

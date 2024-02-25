@@ -1,0 +1,39 @@
+footer {
+    background-color: var(--background);
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr) auto;
+    grid-gap: 0.25rem;
+}
+
+.footer-grid > div:nth-child(odd) {
+    text-align: left;
+}
+
+.footer-grid > div:nth-child(even) {
+    text-align: right;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--main);
+
+    cursor: pointer;
+
+    text-decoration: none;
+}

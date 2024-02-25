@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
-    border-color: var(--color);
+    border-color: var(--main);
     border-top-width: 0.063rem;
     border-top-style: solid;
     border-bottom-style: none;
@@ -53,7 +53,7 @@
     justify-content: center;
     align-items: center;
 
-    border-color: var(--color);
+    border-color: var(--main);
     border-left-style: solid;
     border-width: 0.125rem;
 
@@ -63,8 +63,7 @@
 .blog-extra-info {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
-    padding-top: 0;
+    padding: 0 0.5rem 0.5rem;
 }
 
 .blog-tags {
@@ -74,7 +73,7 @@
     gap: 0.5rem;
 }
 
-div.post-list:last-child {
+.blog-post:last-child {
     border-width: 0.12rem;
     border-bottom-style: solid;
 }

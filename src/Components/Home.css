@@ -59,7 +59,7 @@ main {
     width: 0.2ch;
     height: 1em;
     margin-left: 2px;
-    background-color: var(--color);
+    background-color: var(--main);
     animation: cursor 1s steps(1) infinite;
 
     position: relative;

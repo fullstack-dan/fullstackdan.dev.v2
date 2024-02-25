@@ -9,15 +9,15 @@
 }
 
 :root {
-    --background-color: #09203f;
-    --color: #ff7746;
+    --background: #09203f;
+    --main: #ff7746;
 }
 
 html {
     font-family: "Space Mono", Arial, sans-serif;
     font-size: 24px;
-    background-color: var(--background-color);
-    color: var(--color);
+    background-color: var(--background);
+    color: var(--main);
 }
 
 .link {
