@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 
 import './App.css';
 import CustomNav from './Components/CustomNav';
 import Footer from './Components/Footer';
-import Home from './Components/Home';
+import Home from './Pages/Home.jsx';
+import AboutPage from './Pages/AboutPage.jsx';
+import BlogPage from './Pages/BlogPage.jsx';
+import PostPage from './Pages/PostPage.jsx';
 
 export const APIContext = React.createContext();
 
@@ -18,10 +19,14 @@ function App() {
             <APIContext.Provider value={APIURL}>
                 <Router>
                     <CustomNav />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<></>} />
-                    </Routes>
+                    <main>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/blog/:id" element={<PostPage />} />
+                        </Routes>
+                    </main>
                     <Footer />
                 </Router>
             </APIContext.Provider>

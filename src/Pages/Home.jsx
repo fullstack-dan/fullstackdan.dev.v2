@@ -1,8 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import PostList from './PostList';
+import PostList from '../Components/PostList.jsx';
 import './Home.css';
-
-import APIContext from '../App.jsx';
 
 const Home = () => {
     const [text, setText] = useState('');
@@ -44,7 +43,7 @@ const Home = () => {
     }, []);
 
     return (
-        <main>
+        <>
             <div className="intro">
                 <h1 className="typewriter">
                     {text}
@@ -59,9 +58,9 @@ const Home = () => {
                     </h2>
                 </div>
             </div>
-            <PostList count={3} />
+            <PostList range={[0, 3]} />
             <h2>... or check out my portfolio!</h2>
-        </main>
+        </>
     );
 };
 

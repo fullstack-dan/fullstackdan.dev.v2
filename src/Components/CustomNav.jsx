@@ -7,7 +7,7 @@ import Logo from './Logo';
 const CustomNav = () => {
     const NavLinks = () => (
         <ul className="nav-links">
-            <Link to="/" className="link">
+            <Link to="/blog" className="link">
                 blog
             </Link>
             <Link to="/about" className="link">

@@ -1,0 +1,21 @@
+.post-page {
+    padding: 1rem;
+}
+
+.post h1 {
+    font-family: "Space Mono Bold", Arial, sans-serif;
+    font-size: 2rem;
+}
+
+.post h2 {
+    font-size: 1.25rem;
+}
+
+.post h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.post p {
+    margin-bottom: 1rem;
+}

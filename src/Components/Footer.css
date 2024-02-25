@@ -2,8 +2,8 @@ footer {
     background-color: var(--background);
     text-align: center;
     padding: 1rem;
-
 }
+
 
 .footer-grid {
     display: grid;

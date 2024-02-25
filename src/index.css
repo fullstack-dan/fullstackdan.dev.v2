@@ -11,6 +11,7 @@
 :root {
     --background: #09203f;
     --main: #ff7746;
+    --darker-main: #a94727;
 }
 
 html {
@@ -18,6 +19,18 @@ html {
     font-size: 24px;
     background-color: var(--background);
     color: var(--main);
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    height: fit-content;
+    flex-grow: 1;
 }
 
 .link {
@@ -48,6 +61,41 @@ html {
 .text-logo:hover {
     bottom: 0.125rem;
     left: 0.125rem;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    /*text-decoration: underline;*/
+
+    border: 0.125rem solid var(--main);
+}
+
+button:hover {
+    background-color: var(--main);
+    color: var(--background);
+    transform: translateY(-0.0625rem) translateX(-0.0625rem);
+}
+
+button:active {
+    transform: translateY(0.125rem) translateX(0.125rem);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    color: var(--darker-main);
+    border-color: var(--darker-main);
+}
+
+button:disabled:hover {
+    background-color: var(--background);
+    transform: none;
+}
+
+.quick-nav {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {

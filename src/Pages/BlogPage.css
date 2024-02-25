@@ -1,0 +1,28 @@
+.blog-page {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.blog-page > h1 {
+    font-family: "Space Mono Bold", Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.posts-display {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.pagination-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-btns button:last-child {
+    border-left: none;
+}

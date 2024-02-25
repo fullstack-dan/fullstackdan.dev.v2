@@ -6,13 +6,11 @@ import './PostList.css';
 import { APIContext } from '../App.jsx';
 
 // eslint-disable-next-line react/prop-types
-const PostList = ({ count }) => {
+const PostList = ({ range }) => {
     const [posts, setPosts] = useState(null);
-    const [postCount, setPostCount] = useState(count);
     const APIURL = React.useContext(APIContext);
 
     useEffect(() => {
-        setPostCount(count);
         fetch(`${APIURL}/blogs`)
             .then((response) => response.json())
             .then((data) => {
@@ -21,13 +19,13 @@ const PostList = ({ count }) => {
             .catch((error) => {
                 console.error('Error fetching posts', error);
             });
-    }, [APIURL, count]);
+    }, [APIURL, range]);
 
     return (
         <>
             {posts ? (
                 <div className="blog-posts">
-                    {posts.slice(0, postCount).map((post) => (
+                    {posts.slice(range[0], range[1]).map((post) => (
                         <PostPreview key={post._id} post={post} />
                     ))}
                 </div>
@@ -41,10 +39,7 @@ const PostList = ({ count }) => {
 const loadingPosts = () => {
     return (
         <h1 className="loading-posts">
-            Loading posts...
-            <span role="img" aria-label="loading">
-                🔄
-            </span>
+            Loading posts<span className="dots"></span>
         </h1>
     );
 };
@@ -55,7 +50,7 @@ const PostPreview = ({ post }) => {
     return (
         <div className="blog-post">
             <div className="blog-info">
-                <Link key={post.id} to={`/posts/${post.id}`}>
+                <Link key={post._id} to={`/blog/${post._id}`}>
                     <h1>{title}</h1>
                 </Link>
                 <div className="blog-extra-info">
