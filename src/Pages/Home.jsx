@@ -59,7 +59,7 @@ const Home = () => {
                 </div>
             </div>
             <PostList range={[0, 3]} />
-            <h2>... or check out my portfolio!</h2>
+            {/*<h2>...or check out my portfolio!</h2>*/}
         </>
     );
 };
