@@ -49,3 +49,14 @@ html {
     bottom: 0.125rem;
     left: 0.125rem;
 }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 20px;
+    }
+
+    .text-logo {
+        font-size: 1.25rem;
+    }
+}
+

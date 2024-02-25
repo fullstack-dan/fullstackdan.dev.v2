@@ -37,3 +37,22 @@ footer {
 
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr) auto;
+    }
+
+    .footer-grid > div:nth-child(odd) {
+        text-align: center;
+    }
+
+    .footer-grid > div:nth-child(even) {
+        text-align: center;
+    }
+
+    .footer-icons {
+        justify-content: center;
+    }
+}
