@@ -37,6 +37,11 @@ main {
     animation: fadeInSlide 1s ease-in-out 7s forwards;
 }
 
+.play-anim {
+    opacity: 0;
+    animation: fadeInSlide 1s ease-in-out 9s forwards;
+}
+
 @keyframes fadeInSlide {
     0% {
         opacity: 0;

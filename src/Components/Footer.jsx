@@ -80,7 +80,7 @@ const Footer = () => {
                         </svg>
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/daniel-aoulou/"
+                        href="https://www.linkedin.com/in/daniel-aoulou-315664143/"
                         target="_blank"
                     >
                         <svg

@@ -6,7 +6,7 @@ import './PostList.css';
 import { APIContext } from '../App.jsx';
 
 // eslint-disable-next-line react/prop-types
-const PostList = ({ range }) => {
+const PostList = React.memo(({ range }) => {
     const [posts, setPosts] = useState(null);
     const APIURL = React.useContext(APIContext);
 
@@ -17,6 +17,7 @@ const PostList = ({ range }) => {
                 setPosts(data.blogs);
             })
             .catch((error) => {
+                setPosts(['ERROR']);
                 console.error('Error fetching posts', error);
             });
     }, [APIURL, range]);
@@ -24,17 +25,24 @@ const PostList = ({ range }) => {
     return (
         <>
             {posts ? (
-                <div className="blog-posts">
-                    {posts.slice(range[0], range[1]).map((post) => (
-                        <PostPreview key={post._id} post={post} />
-                    ))}
-                </div>
+                posts[0] !== 'ERROR' ? (
+                    <div className="blog-posts">
+                        {posts.slice(range[0], range[1]).map((post) => (
+                            <PostPreview key={post._id} post={post} />
+                        ))}
+                    </div>
+                ) : (
+                    <h1 className="posts-error">
+                        Posts aren&apos;t loading right now. Please try again
+                        later!
+                    </h1>
+                )
             ) : (
                 loadingPosts()
             )}
         </>
     );
-};
+});
 
 const loadingPosts = () => {
     return (

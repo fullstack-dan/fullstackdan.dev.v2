@@ -58,7 +58,9 @@ const Home = () => {
                     </h2>
                 </div>
             </div>
-            <PostList range={[0, 3]} />
+            <div className={playAnim ? 'play-anim' : ''}>
+                <PostList range={[0, 3]} />
+            </div>
             {/*<h2>...or check out my portfolio!</h2>*/}
         </>
     );
