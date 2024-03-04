@@ -9,7 +9,7 @@ const BlogPage = () => {
         <div className={'blog-page'}>
             <h1>All Blogs</h1>
             <div className="posts-display">
-                <PostList range={range} />
+                <PostList range={range} asc={false} />
                 <div className={'pagination-btns'}>
                     <button
                         disabled={range[0] === 0}

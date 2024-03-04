@@ -6,15 +6,32 @@ import './PostList.css';
 import { APIContext } from '../App.jsx';
 
 // eslint-disable-next-line react/prop-types
-const PostList = React.memo(({ range }) => {
+const PostList = React.memo(({ range, asc }) => {
     const [posts, setPosts] = useState(null);
     const APIURL = React.useContext(APIContext);
+
+    const sortByDate = (asc) => {
+        if (asc) {
+            setPosts((prevPosts) => {
+                return prevPosts.sort((a, b) => {
+                    return new Date(a.createdAt) - new Date(b.createdAt);
+                });
+            });
+        } else {
+            setPosts((prevPosts) => {
+                return prevPosts.sort((a, b) => {
+                    return new Date(b.createdAt) - new Date(a.createdAt);
+                });
+            });
+        }
+    };
 
     useEffect(() => {
         fetch(`${APIURL}/blogs`)
             .then((response) => response.json())
             .then((data) => {
                 setPosts(data.blogs);
+                sortByDate(asc);
             })
             .catch((error) => {
                 setPosts(['ERROR']);

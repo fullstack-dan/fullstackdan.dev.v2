@@ -18,4 +18,5 @@
 
 .post p {
     margin-bottom: 1rem;
+    text-wrap: normal;
 }
