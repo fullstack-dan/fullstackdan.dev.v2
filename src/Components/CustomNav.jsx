@@ -13,6 +13,13 @@ const CustomNav = () => {
             <Link to="/about" className="link">
                 about
             </Link>
+            <a
+                href="https://portfolio-16w1.onrender.com/"
+                target="_blank"
+                className="link"
+            >
+                portfolio
+            </a>
         </ul>
     );
 
