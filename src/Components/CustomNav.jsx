@@ -14,7 +14,7 @@ const CustomNav = () => {
                 about
             </Link>
             <a
-                href="https://portfolio-16w1.onrender.com/"
+                href="https://portfolio.fullstackdan.dev/"
                 target="_blank"
                 className="link"
             >
