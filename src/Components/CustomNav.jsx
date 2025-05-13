@@ -27,14 +27,14 @@ const CustomNav = () => {
                 about
             </Link>
             <a
-                href="https://portfolio.fullstackdan.dev/"
+                href="https://portfolio-16w1.onrender.com/"
                 target="_blank"
                 className="link"
             >
                 portfolio
             </a>
             <a
-                href="../../public/Daniel_s_Resume.pdf"
+                href="../../Daniel_s_Resume.pdf"
                 target="_blank"
                 className="link"
             >
