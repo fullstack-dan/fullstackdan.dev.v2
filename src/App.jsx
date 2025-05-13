@@ -8,6 +8,7 @@ import Home from './Pages/Home.jsx';
 import AboutPage from './Pages/AboutPage.jsx';
 import BlogPage from './Pages/BlogPage.jsx';
 import PostPage from './Pages/PostPage.jsx';
+import Intro from './Components/Intro.jsx';
 
 export const APIContext = React.createContext();
 

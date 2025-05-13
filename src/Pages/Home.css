@@ -25,13 +25,19 @@ main {
     gap: 0.5rem;
 }
 
-.intro div :nth-child(1).play-anim {
+div :nth-child(1).play-anim {
     opacity: 0;
     transform: translateY(0.3125rem);
     animation: fadeInSlide 1s ease-in-out 4.5s forwards;
 }
 
-.intro div :nth-child(2).play-anim {
+div :nth-child(2).play-anim {
+    opacity: 0;
+    transform: translateY(0.3125rem);
+    animation: fadeInSlide 1s ease-in-out 4.5s forwards;
+}
+
+div :nth-child(3).play-anim {
     opacity: 0;
     transform: translateY(0.3125rem);
     animation: fadeInSlide 1s ease-in-out 7s forwards;
@@ -56,7 +62,6 @@ main {
 
 .typewriter {
     font-size: 1.5rem;
-    text-align: center;
 }
 
 .cursor {

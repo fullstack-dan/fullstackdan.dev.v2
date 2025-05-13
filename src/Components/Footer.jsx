@@ -29,7 +29,7 @@ const Footer = () => {
                     </h1>
                 </div>
                 <div>
-                    <h1>Copyright 2024 Daniel Aoulou</h1>
+                    <h1>Copyright Daniel Aoulou</h1>
                 </div>
                 <div className={'footer-icons'}>
                     <a

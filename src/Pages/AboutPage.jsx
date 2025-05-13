@@ -11,9 +11,16 @@ const AboutPage = () => {
                 GA. Thanks for visiting my site!
                 <br />
                 <br />I started my development journey in my senior year of high
-                school with the help of the folks over at The Odin Project. The
-                best way to learn, however, is by doing, and that&apos;s exactly
-                what I&apos;ve been doing for the past few years.
+                school with the help of the folks over at{' '}
+                <a
+                    href={'https://www.theodinproject.com/'}
+                    target={'_blank'}
+                    className={'link'}
+                >
+                    The Odin Project
+                </a>
+                . The best way to learn, however, is by doing, and that&apos;s
+                exactly what I&apos;ve been doing for the past few years.
                 <br />
                 <br />
                 I&apos;ve been coding for much longer than that though; one of

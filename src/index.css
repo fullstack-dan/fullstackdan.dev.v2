@@ -1,21 +1,23 @@
+@import 'tailwindcss';
+
 @font-face {
-    font-family: "Space Mono";
-    src: url("./assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/Space_Mono/SpaceMono-Regular.ttf');
 }
 
 @font-face {
-    font-family: "Space Mono Bold";
-    src: url("./assets/fonts/Space_Mono/SpaceMono-Bold.ttf");
+    font-family: 'Space Mono Bold';
+    src: url('./assets/fonts/Space_Mono/SpaceMono-Bold.ttf');
 }
 
 :root {
-    --background: #09203f;
-    --main: #ff7746;
-    --darker-main: #a94727;
+    --background: #111217;
+    --main: #fff;
+    --darker-main: #aaa;
 }
 
 html {
-    font-family: "Space Mono", Arial, sans-serif;
+    font-family: 'Space Mono', Arial, sans-serif;
     font-size: 24px;
     background-color: var(--background);
     color: var(--main);
@@ -26,7 +28,6 @@ html {
     display: flex;
     flex-direction: column;
 }
-
 
 main {
     height: fit-content;
@@ -47,7 +48,7 @@ main {
 }
 
 .text-logo {
-    font-family: "Space Mono Bold", Arial, sans-serif;
+    font-family: 'Space Mono Bold', Arial, sans-serif;
     font-style: italic;
     font-size: 1.5rem;
     letter-spacing: -0.156rem;
@@ -107,4 +108,3 @@ button:disabled:hover {
         font-size: 1.25rem;
     }
 }
-
