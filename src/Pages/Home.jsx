@@ -6,6 +6,14 @@ import Intro from '../Components/Intro.jsx';
 
 const Home = () => {
     const [playAnim, setPlayAnim] = useState(false);
+
+    useEffect(() => {
+        const typewriterPlayed = localStorage.getItem('typewriterPlayed');
+        if (typewriterPlayed !== 'true') {
+            setPlayAnim(true);
+        }
+    }, []);
+
     return (
         <>
             <Intro />

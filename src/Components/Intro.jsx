@@ -42,7 +42,7 @@ const Intro = () => {
     }, []);
 
     return (
-        <div className="">
+        <div className="mb-8">
             <div className="flex px-8 items-center justify-center gap-4 flex-col-reverse md:flex-row">
                 {/* <div className="flex-1 justify-center flex items-center">
                     <img
