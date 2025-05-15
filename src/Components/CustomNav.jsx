@@ -59,7 +59,7 @@ const CustomNav = () => {
                         </button>
                     </nav>
                     {menuOpen ? (
-                        <ul className="text-4xl text-right flex flex-col space-y-8 p-8 absolute pt-28 left-0 right-0 bg-[var(--background)] text-white h-dvh mobile-menu">
+                        <ul className="text-4xl text-right flex flex-col space-y-8 p-8 absolute pt-28 left-0 right-0 bg-[var(--background)] z-10 text-white h-dvh mobile-menu">
                             <Link
                                 to="/blog"
                                 className="link"
