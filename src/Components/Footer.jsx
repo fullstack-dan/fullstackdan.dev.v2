@@ -11,10 +11,10 @@ const Footer = () => {
                 <div>
                     <h1 className="footer-info">
                         <a
-                            href="mailto:aouloudan@icloud.com"
+                            href="mailto:aouloudan00@gmail.com"
                             className={'link'}
                         >
-                            aouloudan@icloud.com
+                            aouloudan00@gmail.com
                         </a>
                     </h1>
                 </div>
